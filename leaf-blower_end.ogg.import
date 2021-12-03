@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/leaf-blower_end.ogg-4346372c3b05cc6b28a8c019d3ca29f8.oggstr"
+
+[deps]
+
+source_file="res://leaf-blower_end.ogg"
+dest_files=[ "res://.import/leaf-blower_end.ogg-4346372c3b05cc6b28a8c019d3ca29f8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

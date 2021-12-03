@@ -114,7 +114,11 @@ margin_left = 335.0
 margin_top = 216.0
 margin_right = 664.0
 margin_bottom = 230.0
-text = "Blow the litter into the corner so you can pick it up!"
+text = "Clean Up This Mess!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Score" type="Label" parent="HUD"]
 margin_left = 5.0
@@ -127,4 +131,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="body_entered" from="CleanupZone" to="." method="_on_CleanupZone_body_entered"]
+[connection signal="body_exited" from="CleanupZone" to="." method="_on_CleanupZone_body_exited"]
 [connection signal="pressed" from="HUD/Button" to="." method="_on_Button_pressed"]

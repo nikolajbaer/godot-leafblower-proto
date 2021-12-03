@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Plume.gd" type="Script" id=1]
+[ext_resource path="res://leaf-blower_end.ogg" type="AudioStream" id=2]
+[ext_resource path="res://leaf-blower_start.ogg" type="AudioStream" id=3]
+[ext_resource path="res://leaf-blower_going.ogg" type="AudioStream" id=4]
 
 [sub_resource type="CylinderShape" id=1]
 radius = 0.963361
@@ -18,3 +21,17 @@ shape = SubResource( 1 )
 
 [node name="Target" type="Spatial" parent="."]
 transform = Transform( 1, 1.02445e-08, 0, -1.02445e-08, 1, -1.60583e-12, -7.27596e-12, -4.9738e-12, 1, 30.8613, 0.170665, 0.000569241 )
+
+[node name="blow_start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 0.1
+
+[node name="blow_run" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 0.1
+
+[node name="blow_end" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = 0.1
+
+[connection signal="finished" from="blow_start" to="." method="_on_blow_start_finished"]

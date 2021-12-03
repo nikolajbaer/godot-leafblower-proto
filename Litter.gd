@@ -4,7 +4,7 @@ extends Spatial
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-export var litter_count = 500
+export var litter_count = 100
 var gravel_template = preload("res://Gravel.tscn")
 var leaf_template = preload("res://Leaf.tscn")
 
@@ -12,7 +12,7 @@ var leaf_template = preload("res://Leaf.tscn")
 func _ready():
 	for i in range(litter_count):
 		var l
-		if randf() > 0.25:
+		if randf() > 0.75:
 			l = gravel_template.instance()
 		else:
 			l = leaf_template.instance()

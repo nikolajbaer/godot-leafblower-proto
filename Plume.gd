@@ -4,16 +4,21 @@ var strength = 5
 var ground_effect = 0.1
 var collide
 var target
+var active = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	collide = $PlumeCollider
 	target = $Target
 
+func activate():
+	self.active = true
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	var aim_v = target.global_transform.origin - self.global_transform.origin
-	if Input.is_action_pressed("blow"):
+	if active and Input.is_action_pressed("blow"):
 		for b in self.get_overlapping_bodies():
 			if b is StaticBody: continue
 			

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Plume.gd" type="Script" id=1]
+
+[sub_resource type="CylinderShape" id=1]
+radius = 0.963361
+height = 5.87074
+
+[node name="Plume" type="Area"]
+transform = Transform( 1.93492e-05, -0.000163482, -1, -0.0086474, 0.999963, -0.000163689, 0.999963, 0.0086474, 1.79638e-05, 0, 0, -4.76837e-07 )
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="PlumeCollider" type="CollisionShape" parent="."]
+transform = Transform( 1.34709, -9.90886, 0.00617582, 9.90886, 1.3471, 0.00691018, -0.00767916, 0.00518862, 10, 28.2887, -1.70345, 0.146182 )
+shape = SubResource( 1 )
+
+[node name="Target" type="Spatial" parent="."]
+transform = Transform( 1, 1.02445e-08, 0, -1.02445e-08, 1, -1.60583e-12, -7.27596e-12, -4.9738e-12, 1, 30.8613, 0.170665, 0.000569241 )

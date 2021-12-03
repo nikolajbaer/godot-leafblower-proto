@@ -1,0 +1,247 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 1.2
+height = 9.0
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.8, 0.2, 0.8 )
+
+[sub_resource type="CylinderMesh" id=22]
+
+[sub_resource type="SpatialMaterial" id=23]
+albedo_color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+metallic_specular = 0.0
+roughness = 0.66
+
+[sub_resource type="SpatialMaterial" id=3]
+params_billboard_mode = 1
+albedo_color = Color( 0.823529, 0.803922, 0.768627, 1 )
+
+[sub_resource type="QuadMesh" id=24]
+material = SubResource( 3 )
+size = Vector2( 0.2, 0.2 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "Idle_unarmed"
+length = 0.0416667
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "Knife_equip"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "Knife_fire"
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=10]
+resource_name = "Knife_idle"
+length = 0.0416667
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=11]
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=12]
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=13]
+length = 0.666667
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.666667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=14]
+length = 0.0416667
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=15]
+length = 2.41667
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2.41667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=16]
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=17]
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=18]
+length = 0.666667
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.666667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=19]
+length = 0.0416667
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0.0416667, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=20]
+length = 3.125
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 3.125, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=21]
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1 )
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 1, 0.000157058, -0.000143805, -0.000157018, 1, 0.000180669, 0.000143848, -0.000180634, 1, 0, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Body_CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 5.81098, 0 )
+shape = SubResource( 1 )
+
+[node name="Feet_CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.493176, 0 )
+shape = SubResource( 2 )
+
+[node name="Rotation_Helper" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.239, 0 )
+
+[node name="Model" type="Spatial" parent="Rotation_Helper"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.405, 0 )
+
+[node name="Armature" type="Spatial" parent="Rotation_Helper/Model"]
+
+[node name="LeafBlower" type="Spatial" parent="Rotation_Helper/Model/Armature"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Rotation_Helper/Model/Armature/LeafBlower"]
+transform = Transform( 0.422661, 0.506089, -0.0600166, 0.0319524, 0.812364, 0.463615, 0.0855018, -2.80533, 0.123425, -2.09451, 9.41024, 2.22949 )
+cast_shadow = 0
+mesh = SubResource( 22 )
+material/0 = SubResource( 23 )
+
+[node name="CPUParticles" type="CPUParticles" parent="Rotation_Helper/Model/Armature/LeafBlower/MeshInstance"]
+transform = Transform( -0.252186, -0.967397, 0.0233783, -0.964243, 0.249181, -0.0902615, 0.0814931, -0.0453055, -0.995644, 0.0738075, -1.08751, 0.711535 )
+cast_shadow = 0
+emitting = false
+amount = 16
+lifetime = 1.22
+randomness = 0.33
+lifetime_randomness = 0.2
+mesh = SubResource( 24 )
+spread = 45.18
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 4.0
+linear_accel = 1.0
+
+[node name="Animation_Player" type="AnimationPlayer" parent="Rotation_Helper/Model"]
+autoplay = "Idle_unarmed"
+anims/Idle_unarmed = SubResource( 7 )
+anims/Knife_equip = SubResource( 8 )
+anims/Knife_fire = SubResource( 9 )
+anims/Knife_idle = SubResource( 10 )
+anims/Knife_unequip = SubResource( 11 )
+anims/Pistol_equip = SubResource( 12 )
+anims/Pistol_fire = SubResource( 13 )
+anims/Pistol_idle = SubResource( 14 )
+anims/Pistol_reload = SubResource( 15 )
+anims/Pistol_unequip = SubResource( 16 )
+anims/Rifle_equip = SubResource( 17 )
+anims/Rifle_fire = SubResource( 18 )
+anims/Rifle_idle = SubResource( 19 )
+anims/Rifle_reload = SubResource( 20 )
+anims/Rifle_unequip = SubResource( 21 )
+
+[node name="Camera" type="Camera" parent="Rotation_Helper"]
+transform = Transform( -1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, -1, 0, -0.307539, -0.0646362 )
+current = true
+fov = 90.0
+far = 1000.0
+
+[node name="Flashlight" type="SpotLight" parent="Rotation_Helper"]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.307539, -0.0646362 )
+visible = false
+light_color = Color( 1, 0.915375, 0.769531, 1 )
+light_energy = 0.8
+spot_range = 30.0
+spot_attenuation = 2.0
+spot_angle = 50.0

@@ -1,7 +1,7 @@
 extends Area
 
 var strength = 5
-var ground_effect = 0.1
+var ground_effect = 0.05
 var collide
 var target
 var active = false
